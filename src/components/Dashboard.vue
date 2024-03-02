@@ -6,19 +6,14 @@
   })
 
   const msgStopEaten = "Hey! Deja galletas para el resto"
+  const countMaxEaten = 11
+
   const count = ref(0)
 </script>
 
 <template>
-  <h1 v-if="count < 69">{{ msg }}</h1>
-  <h1 v-else="count >= 69">{{ msgStopEaten }}</h1>
-
-  <!-- <p v-if="flagIf">
-Este flagIf pasa de pana
-</p>
-<p v-else="flagIf != true">
-Este flagIf no pasa de pana
-</p> -->
+  <h1 v-if="count < countMaxEaten">{{ msg }}</h1>
+  <h1 v-else="count >= countMaxEaten">{{ msgStopEaten }}</h1>
 
   <div class="card">
     <button type="button" @click="count++">Eaten Cookies {{ count }}</button>
