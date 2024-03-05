@@ -1,11 +1,12 @@
 <script setup>
   import { ref } from 'vue'
+  import SocialMedia from './SocialMedia.vue';
 
   defineProps({
     msg: String,
   })
 
-  const msgStopEaten = "Hey! Deja galletas para el resto"
+  const msgStopEaten = "Hey! i wanna cookies too"
   const countMaxEaten = 11
 
   const count = ref(0)
@@ -17,29 +18,14 @@
 
   <div class="card">
     <button type="button" @click="count++">Eaten Cookies {{ count }}</button>
-    <p>
-      <a href="https://github.com/fernandezeric" target="_blank">
-        <code>fernandezeric</code>
-      </a>
-    </p>
+    
+    <SocialMedia/>
   </div>
-
-  <!-- <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p> -->
   <p class="read-the-docs">Eric Fernández González</p>
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
+  .read-the-docs {
+    color: #888;
+  }
 </style>
